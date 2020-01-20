@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.systematic.netcore"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //for circle image
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    implementation files('libs/ksoap2-android-assembly-2.6.0-jar-with-dependencies.jar')
+
+    //for loading dialog and doAsync & uiThread
+    implementation "org.jetbrains.anko:anko:0.10.4"
+
+    //for material dialog
+    implementation 'com.afollestad.material-dialogs:core:0.9.5.0'
+
+    //for map
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+
+    //for logo bounce animation
+    implementation 'com.daimajia.easing:library:1.0.1@aar'
+    implementation 'com.daimajia.androidanimations:library:1.1.3@aar'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'io.reactivex:rxandroid:1.2.0'
+    implementation 'io.reactivex:rxjava:1.1.5'
+    //end for logo bounce animation
+
+    //for room database
+    implementation "android.arch.persistence.room:runtime:1.1.0-alpha2"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.0-alpha2"
+    kapt "android.arch.persistence.room:compiler:1.1.0-alpha2"
+
+    implementation 'com.google.code.gson:gson:2.8.2'
+
+
+}

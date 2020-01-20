@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.ApplicationSettingActivity">
+
+    <TextView
+            android:id="@+id/tv_app_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APPLICATION SETTING"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_14"
+            android:textColor="@color/colorPrimary"
+            android:textSize="26sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_web_service_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_app_setting"
+            android:layout_marginLeft="@dimen/margin_14"
+            android:layout_marginTop="@dimen/margin_14"
+            android:layout_marginRight="@dimen/margin_14"
+            android:textColorHint="@color/colorAccent">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWebServicUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Web Service Url"
+                android:textSize="@dimen/text_regular_16"
+                android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/margin_14"
+            android:layout_marginLeft="@dimen/margin_14"
+            android:layout_marginRight="@dimen/margin_14"
+            android:gravity="center"
+            android:layout_below="@+id/til_web_service_url"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/color_white"
+            android:text="Save"/>
+
+    <Button
+            android:id="@+id/btnClearData"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btnSave"
+            android:layout_marginTop="@dimen/margin_14"
+            android:layout_marginLeft="@dimen/margin_14"
+            android:layout_marginRight="@dimen/margin_14"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/color_white"
+            android:text="clear data"/>
+
+</RelativeLayout>

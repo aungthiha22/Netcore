@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+                android:id="@+id/navCreateSaleOrder"
+                android:icon="@drawable/saleorder"
+                android:title="@string/menu_new_sale_order"/>
+        <item
+                android:id="@+id/navCustomer"
+                android:icon="@drawable/customer"
+                android:title="@string/menu_customer"/>
+
+        <item
+                android:id="@+id/navSaleOrder"
+                android:icon="@drawable/saleorder"
+                android:title="@string/menu_sale_order_list"/>
+
+        <item
+                android:id="@+id/navInstallation"
+                android:icon="@drawable/installation"
+                android:title="@string/menu_installation"/>
+        <item
+                android:id="@+id/navBilling"
+                android:icon="@drawable/billing"
+                android:title="@string/menu_billing"/>
+        <item
+                android:id="@+id/navInvoicing"
+                android:icon="@drawable/invoice"
+                android:title="@string/menu_invoicing"/>
+
+        <item
+                android:id="@+id/navSacout"
+                android:icon="@drawable/sacout_icon"
+                android:title="@string/menu_sacout"/>
+
+    </group>
+
+    <item android:title="General">
+        <menu>
+            <item
+                    android:id="@+id/navPromotion"
+                    android:icon="@drawable/promotion"
+                    android:title="@string/menu_promotion"/>
+            <item
+                    android:id="@+id/navLogout"
+                    android:icon="@drawable/logout"
+                    android:title="@string/menu_logout"/>
+        </menu>
+    </item>
+
+</menu>

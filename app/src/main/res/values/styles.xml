@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="TextViewDefaultStyle" parent="@android:style/Widget.Material.TextView">
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="AutoCompleteTextViewDefaultStyle" parent="@android:style/Widget.AutoCompleteTextView">
+        <!--Font-->
+
+        <item name="android:textSize">17sp</item>
+        <!--Position-->
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <!--Color-->
+        <item name="android:textColor">@color/ProjectGreen</item>
+        <item name="android:textColorHint">@color/ProjectBackground</item>
+        <item name="android:backgroundTint">@color/ProjectGreen</item>
+        <!--Cursor-->
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+
+    <style name="EditTextDefaultStyle" parent="@android:style/Widget.EditText">
+        <!--Font-->
+        <item name="android:textSize">17sp</item>
+        <!--Position-->
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <!--Color-->
+        <item name="android:textColor">@color/ProjectGreen</item>
+        <item name="android:textColorHint">@color/ProjectBackground</item>
+        <item name="android:backgroundTint">@color/ProjectGreen</item>
+        <!--Cursor-->
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+
+     <style name="EditTextStyle" parent="@android:style/Widget.EditText">
+        <!--Font-->
+        <item name="android:textSize">17sp</item>
+        <!--Position-->
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <!--Color-->
+        <item name="android:textColor">@color/ProjectGreen</item>
+        <item name="android:textColorHint">@color/ProjectBackground</item>
+        <item name="android:backgroundTint">@color/ProjectGreen</item>
+        <!--Cursor-->
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+
+    <style name="SpinnerDefaultStyle" parent="@android:style/Widget.Material.Spinner.Underlined">
+        <!--Font-->
+        <item name="android:textSize">17sp</item>
+        <!--Position-->
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <!--Color-->
+        <item name="android:popupBackground">#ffffff</item>
+        <item name="android:backgroundTint">@color/ProjectGreen</item>//Line color
+    </style>
+
+</resources>

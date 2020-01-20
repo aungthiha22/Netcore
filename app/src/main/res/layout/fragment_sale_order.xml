@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rlSaleOrder"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/llTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/margin_10"
+            android:background="@color/colorPrimary">
+
+        <TextView
+                android:id="@+id/tvSaleOrderNo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="No"
+                android:textAllCaps="true"
+                android:textColor="@color/color_white"
+                android:gravity="center"
+                android:textSize="@dimen/text_regular_16"/>
+
+        <TextView
+                android:id="@+id/tvCustomerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Name"
+                android:textAllCaps="true"
+                android:textColor="@color/color_white"
+                android:gravity="left"
+                android:textSize="@dimen/text_regular_16"/>
+
+        <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Product"
+                android:textAllCaps="true"
+                android:textColor="@color/color_white"
+                android:gravity="center"
+                android:textSize="@dimen/text_regular_16"/>
+
+        <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Price"
+                android:textAllCaps="true"
+                android:textColor="@color/color_white"
+                android:gravity="center"
+                android:textSize="@dimen/text_regular_16"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSaleOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8"
+            android:isScrollContainer="false"
+    android:layout_below="@id/llTitle"/>
+
+</RelativeLayout>

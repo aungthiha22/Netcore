@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.InstallationInfoActivity">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <!--Layout For Service-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <!--for Installation No-->
+            <TextView
+                    android:id="@+id/tvInstallationNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Installation No"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+            <!--for Installation No Info-->
+            <TextView
+                    android:id="@+id/tvInstallationInfoNoInfo"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INS111"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_14"/>
+
+            <!--for Customer Name-->
+            <TextView
+                    android:id="@+id/tvCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:text="Customer Name"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+            <!--for Customer Name Info-->
+            <com.systematic.netcore.utility.SpinnerSearchForCustomer
+                    android:id="@+id/spCustomerNameForInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"/>
+
+            <!--Layout PPOE name and password-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <!--for PPOE name-->
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilPPOEName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="PPOE Name"
+                            android:textColorHint="@color/colorPrimary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPPOEName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="10dp"
+                                android:textSize="@dimen/text_regular_14"
+                                android:textColor="@color/colorPrimary"
+                                android:inputType="text"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <!--for PPOE password-->
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilPPOEPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="PPOE Password"
+                            android:textColorHint="@color/colorPrimary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPPOEPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="10dp"
+                                android:textSize="@dimen/text_regular_14"
+                                android:textColor="@color/colorPrimary"
+                                android:inputType="number"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Layout wifi name and password-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <!--for PPOE name-->
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilWifiName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="WifiName"
+                            android:textColorHint="@color/colorPrimary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etWifiName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="10dp"
+                                android:textSize="@dimen/text_regular_14"
+                                android:textColor="@color/colorPrimary"
+                                android:inputType="text"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <!--for wifi password-->
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilWifiPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="Wifi Password"
+                            android:textColorHint="@color/colorPrimary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etWifiPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="10dp"
+                                android:textSize="@dimen/text_regular_14"
+                                android:textColor="@color/colorPrimary"
+                                android:inputType="number"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--for VlAN-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilVLAN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="VLAN"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etVLAN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for management MAC-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilManageMAC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Management MAC"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etManageMAC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for User MAC-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUserMAC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="User MAC"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUserMAC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Serial No-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSerialNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Serial No"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSerialNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Port No-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPortNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Port No"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPortNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Node-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Node"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="number"
+                />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Tower Type Name-->
+            <TextView
+                    android:id="@+id/tvTowerTypeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:text="Tower Type"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+            <!--for Tower Type Info-->
+            <com.systematic.netcore.utility.SpinnerSearchForTowerType
+                    android:id="@+id/spTowerType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"/>
+
+            <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_8"
+                    android:text="Save"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:textColor="@color/color_white"
+                    android:background="@drawable/rectangleshape"
+                    android:backgroundTint="@color/colorPrimary"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

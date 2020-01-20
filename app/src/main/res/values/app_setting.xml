@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="WebServiceNameSpace" type="string">http://tempuri.org/</item>
+    <item name="WebServiceURL" type="string">http://192.168.1.64:8087/WebServices/</item>
+    <item name="WebServiceSOAPActionURL" type="string">http://tempuri.org/</item>
+    <item name="AutoUpdateApkURL" type="string">http://192.168.2.103:81/apk/RoyalClub.apk</item>
+    <item name="AutoUpdateApkName" type="string">RoyalClub.apk</item>
+    <item name="DatabaseName" type="string">ROYALCLUB_MOBILE.db</item>
+    <!--<item name="MstPwd" type="string">$y$t3m@t1c</item>-->
+    <item name="MstPwd" type="string">vs</item>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/colorPrimary"
+             android:id="@+id/frameLayout">
+
+    <TextView
+            android:id="@+id/textViewWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center_horizontal"
+            android:alpha="0"
+            android:text="W e l c o m e"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:textColor="#fff"
+            tools:alpha="1"/>
+
+    <TextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:alpha="0"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:textColor="#fff"
+            tools:alpha="1"/>
+
+    <ImageView
+            android:id="@+id/logo_outer_iv"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center"
+            android:background="@color/color_white"/>
+
+    <RelativeLayout
+            android:id="@+id/logo_inner_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+        <ImageView
+                android:id="@+id/imageViewLogin"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/ic_launcher_background"
+                android:padding="15dp"/>
+
+    </RelativeLayout>
+</FrameLayout>

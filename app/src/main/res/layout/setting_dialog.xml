@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_14"
+            android:layout_marginTop="@dimen/margin_14"
+            android:layout_marginRight="@dimen/margin_14"
+            android:textColorHint="@color/colorAccent">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSettingPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Please type password"
+                android:inputType="textPassword"
+                android:textSize="@dimen/text_regular_16"
+                android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/til_password"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_14"
+            android:layout_marginRight="@dimen/margin_14"
+            android:layout_marginBottom="@dimen/margin_14">
+
+        <Button
+                android:id="@+id/btnSettingOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ok"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/color_white"/>
+
+        <Button
+                android:id="@+id/btnSettingCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/color_white"
+                android:layout_marginLeft="@dimen/margin_10"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1c4188</color>
+    <color name="colorPrimaryDark">#123371</color>
+    <color name="colorAccent">#AAA</color>
+
+    <color name="color_white">#fff</color>
+    <color name="color_black">#000</color>
+    <color name="ProjectGreen">#058a34</color>
+    <color name="ProjectSoftGreen">#BCD8C6</color>
+    <color name="ProjectMapBase">#ededed</color>
+    <color name="ProjectBackground">#F5F5F5</color>
+    <color name="ProjectTextHint">#9A9A9A</color>
+    <color name="ProjectBlue">#1C4188</color>
+    <color name="ProjectRed1">#ff8a80</color>
+    <color name="ProjectRed2">#ff5252</color>
+    <color name="ProjectBlack">#000</color>
+</resources>

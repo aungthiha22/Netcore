@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/ProjectBackground">
+
+<com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="?android:attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <ImageButton
+                android:id="@+id/ibBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_14"
+                android:background="@drawable/ic_arrow_back"/>
+
+        <TextView
+                android:id="@+id/tvScout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sacout"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:textSize="@dimen/text_regular_20"
+                android:textColor="@color/color_white"/>
+
+        <ImageButton
+                android:id="@+id/imageButtonSave"
+                android:layout_width="@dimen/btn_w_h_toolbar"
+                android:layout_height="@dimen/btn_w_h_toolbar"
+                android:background="@drawable/ic_check_circle_black_24dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"/>
+
+        <ImageButton
+                android:id="@+id/imageButtonTakePicture"
+                android:layout_width="@dimen/btn_w_h_toolbar"
+                android:layout_height="@dimen/btn_w_h_toolbar"
+                android:background="@drawable/ic_insert_photo_black_24dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+<ScrollView
+        android:id="@+id/svEditScout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:id="@+id/etxtScoutOn"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:editable="false"
+                    android:hint="@string/date"
+                    android:singleLine="true"
+                    android:text="31/12/9999"/>
+
+            <Spinner
+                    android:id="@+id/spinScoutType"
+                    style="@style/SpinnerDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_weight="1"
+                    android:entries="@array/scout_type_test_list"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal">
+
+            <Spinner
+                    android:id="@+id/spinCity"
+                    style="@style/SpinnerDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/township_test_list"/>
+
+            <Spinner
+                    android:id="@+id/spinTownship"
+                    style="@style/SpinnerDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_weight="1"
+                    android:entries="@array/township_test_list"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/llvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_weight="0.5"
+                android:background="@drawable/shadow_layout_2"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+            <EditText
+                    android:id="@+id/etxtScoutNo"
+                    style="@style/TextViewDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:ems="10"
+                    android:hint="@string/scout_no"
+                    android:inputType="text"
+                    android:enabled="false"/>
+
+            <AutoCompleteTextView
+                    android:id="@+id/acTxtCompanyName"
+                    style="@style/AutoCompleteTextViewDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:hint="@string/company_name"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+
+            <AutoCompleteTextView
+                    android:id="@+id/acTxtContactPersonName"
+                    style="@style/AutoCompleteTextViewDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:hint="@string/contact_person_name"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+
+            <EditText
+                    android:id="@+id/etxtContactPersonInfo"
+                    style="@style/EditTextDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:ems="10"
+                    android:hint="@string/contact_person_info"
+                    android:inputType="textMultiLine"
+                    android:maxLength="200"/>
+
+            <EditText
+                    android:id="@+id/etxtAddress"
+                    style="@style/EditTextDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:ems="10"
+                    android:hint="@string/address"
+                    android:inputType="textMultiLine"
+                    android:maxLength="200"/>
+
+            <EditText
+                    android:id="@+id/etxtRemark"
+                    style="@style/EditTextDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:ems="10"
+                    android:hint="@string/remark"
+                    android:inputType="textMultiLine"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/llvLocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/shadow_layout_2"
+                android:orientation="vertical">
+
+            <fragment
+                    android:id="@+id/ShowNearestLocationMapViewMapFrag"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_weight="0.5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <LinearLayout
+                    android:id="@+id/llBtnGetLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/rounded_button"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    <ImageView
+                            android:id="@+id/imgBtnGetLoc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_add_location_black_24dp"/>
+
+                    <TextView
+                            android:id="@+id/txBtnGetLoc"
+                            style="@style/TextViewDefaultStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="@string/get_location"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                <EditText
+                        android:id="@+id/etxtPassiveLat"
+                        style="@style/EditTextDefaultStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:ems="10"
+                        android:hint="@string/lat"
+                        android:inputType="none"
+                        android:text="0"/>
+
+                <EditText
+                        android:id="@+id/etxtPassiveLng"
+                        style="@style/EditTextDefaultStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:ems="10"
+                        android:hint="@string/lng"
+                        android:inputType="none"
+                        android:text="0"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llHiddenData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/darker_gray"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/txtGpsProvider"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            tools:layout_editor_absoluteX="135dp"
+                            tools:layout_editor_absoluteY="285dp"/>
+
+                    <TextView
+                            android:id="@+id/txtGpsLng"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            tools:layout_editor_absoluteX="135dp"
+                            tools:layout_editor_absoluteY="285dp"/>
+
+                    <TextView
+                            android:id="@+id/txtGpsLat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            tools:layout_editor_absoluteX="135dp"
+                            tools:layout_editor_absoluteY="285dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="463dp">
+
+                    <TextView
+                            android:id="@+id/txtNetworkProvider"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            tools:layout_editor_absoluteX="135dp"
+                            tools:layout_editor_absoluteY="285dp"/>
+
+                    <TextView
+                            android:id="@+id/txtNetworkLat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            tools:layout_editor_absoluteX="135dp"
+                            tools:layout_editor_absoluteY="285dp"/>
+
+                    <TextView
+                            android:id="@+id/txtNetworkLng"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="TextView"
+                            tools:layout_editor_absoluteX="135dp"
+                            tools:layout_editor_absoluteY="285dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/txtPassiveProvider"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"
+                            tools:layout_editor_absoluteX="135dp"
+                            tools:layout_editor_absoluteY="285dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--<Spinner-->
+        <!--android:id="@+id/spinTownship"-->
+        <!--style="@style/Widget.AppCompat.Spinner.Underlined"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="top|start"-->
+        <!--android:layout_weight="0.5"-->
+        <!--android:popupBackground="@android:color/darker_gray"-->
+        <!--android:backgroundTint="#00ffff"-->
+        <!--android:textColor="@android:color/holo_purple"-->
+        <!--android:entries="@array/township_test_list"/>-->
+
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/llImgs"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="250dp"-->
+        <!--android:background="@android:color/holo_blue_light"-->
+        <!--android:orientation="horizontal"-->
+        <!--tools:layout_editor_absoluteX="16dp"-->
+        <!--tools:layout_editor_absoluteY="383dp">-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+                android:id="@+id/llvImgs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/shadow_layout_2"
+                android:orientation="vertical">
+
+            <HorizontalScrollView
+                    android:id="@+id/svhImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="8dp">
+
+                <LinearLayout
+                        android:id="@+id/llImgs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="383dp">
+
+                    <ImageButton
+                            android:id="@+id/btnAddImage"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/get_picture"
+                            app:srcCompat="@drawable/add_new"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                    android:id="@+id/llBtnGetPicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_button"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    <ImageView
+                            android:id="@+id/imgBtnGetPicture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_insert_photo_black_24dp"/>
+
+                    <TextView
+                            android:id="@+id/txBtnGetPicture"
+                            style="@style/TextViewDefaultStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="@string/get_picture"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/llBtnSave"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_button"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="150dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                <ImageView
+                        android:id="@+id/imgBtnSave"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/save"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_check_circle_black_24dp"/>
+
+                <TextView
+                        android:id="@+id/txBtnSave"
+                        style="@style/TextViewDefaultStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/save"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+<!--<include layout="@layout/content_main" />-->
+
+<!--<android.support.design.widget.FloatingActionButton-->
+<!--android:id="@+id/fab"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_gravity="bottom|end"-->
+<!--android:layout_margin="@dimen/fab_margin"-->
+<!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

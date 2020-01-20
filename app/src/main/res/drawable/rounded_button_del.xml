@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <shape
+            android:shape="rectangle">
+            <corners
+                android:bottomLeftRadius="70dp"
+                android:radius="70dp"
+                android:topRightRadius="70dp"
+                android:topLeftRadius="70dp"
+                android:bottomRightRadius="70dp"/>
+            <size android:height="30dp"/>
+            <solid android:color="@color/ProjectRed1"/>
+            <!--<solid android:color="@color/green_color_3"/>-->
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape
+            android:shape="rectangle">
+            <corners
+                android:bottomLeftRadius="70dp"
+                android:radius="70dp"
+                android:topRightRadius="70dp"
+                android:topLeftRadius="70dp"
+                android:bottomRightRadius="70dp"/>
+            <size android:height="30dp"/>
+            <solid android:color="@color/ProjectRed2"/>
+            <!--<solid android:color="@color/green_color_2"/>-->
+        </shape>
+    </item>
+
+    <!--<item android:drawable="@color/ProjectRed1" android:state_focused="true" android:state_pressed="true"/>-->
+    <!--<item android:drawable="@color/ProjectRed1" android:state_focused="false" android:state_pressed="true"/>-->
+    <!--<item android:drawable="@color/ProjectRed1" android:state_focused="true"/>-->
+    <!--<item android:drawable="@color/ProjectRed2" android:state_focused="false" android:state_pressed="false"/>-->
+
+</selector>

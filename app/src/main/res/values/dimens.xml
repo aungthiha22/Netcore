@@ -1,0 +1,43 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_14">14dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_26">26dp</dimen>
+    <dimen name="margin_28">28dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_42">60dp</dimen>
+    <dimen name="margin_btn_voucher">130dp</dimen>
+
+    <dimen name="text_regular_4">4sp</dimen>
+    <dimen name="text_regular_12">12sp</dimen>
+    <dimen name="text_regular_14">14sp</dimen>
+    <dimen name="text_regular_16">16sp</dimen>
+    <dimen name="text_regular_18">18sp</dimen>
+    <dimen name="text_regular_20">20sp</dimen>
+    <dimen name="text_regular_24">24sp</dimen>
+    <dimen name="text_regular_26">26sp</dimen>
+    <dimen name="text_regular_28">28sp</dimen>
+
+    <dimen name="btn_w_h_toolbar">40dp</dimen>
+    <dimen name="navigation_width">320dp</dimen>
+
+    <dimen name="dime_4">4dp</dimen>
+    <dimen name="dime_8">8dp</dimen>
+    <dimen name="dime_16">16dp</dimen>
+    <dimen name="dime_32">32dp</dimen>
+    <dimen name="dime_120">100dp</dimen>
+</resources>

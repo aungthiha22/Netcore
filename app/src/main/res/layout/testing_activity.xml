@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlSaleOrder"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@color/colorPrimary"
+        android:text="testing">
+
+
+    </Button>
+
+    <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/testRecycler"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/margin_8"
+       android:isScrollContainer="false"
+       android:layout_below="@id/btnTest"/>
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/llTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_8">
+        <!--<include layout="@layout/toolbar"/>-->
+
+        <ImageView
+                android:id="@+id/btnPreviousDate"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_keyboard_arrow_left"/>
+
+        <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="24-4-2019"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/rectangleshape"
+                android:padding="@dimen/margin_small"
+                android:textSize="@dimen/text_regular_20"
+                android:textColor="@color/color_black"/>
+
+        <ImageView
+                android:id="@+id/btnNextDate"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_keyboard_arrow_right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/llTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_below="@id/llTime"
+            android:layout_margin="@dimen/margin_10"
+            android:background="@color/colorPrimary">
+
+        <TextView
+                android:id="@+id/tvServiceNo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Name"
+                android:textAllCaps="true"
+                android:textColor="@color/color_white"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_regular_16"/>
+
+        <TextView
+                android:id="@+id/tvCustomerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Product"
+                android:textAllCaps="true"
+                android:textColor="@color/color_white"
+                android:gravity="left"
+                android:textSize="@dimen/text_regular_16"/>
+
+        <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Price"
+                android:layout_marginRight="@dimen/margin_8"
+                android:textAllCaps="true"
+                android:textColor="@color/color_white"
+                android:gravity="end"
+                android:textSize="@dimen/text_regular_16"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvInstallationList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llTitle"
+            android:layout_margin="@dimen/margin_8"/>
+
+</RelativeLayout>

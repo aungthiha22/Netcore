@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.SaleOrderDetailsActivity">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <Button
+                    android:id="@+id/btnAddToInstallation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add to Installation"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/color_white"
+                    android:paddingLeft="@dimen/margin_14"
+                    android:paddingRight="@dimen/margin_14"
+                    android:background="@drawable/rectangle_shape"
+
+            />
+
+            <!--for Order No-->
+            <TextView
+                    android:id="@+id/tvSaleNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Order No"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+            <!--for Order No Info-->
+            <TextView
+                    android:id="@+id/tvSaleNoInfo"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_14"/>
+
+            <!--for Order Status-->
+            <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Order Status"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+            <!--for Order No Info-->
+            <TextView
+                    android:id="@+id/tvStatusInfo"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_14"/>
+
+            <!--for Customer-->
+            <TextView
+                    android:id="@+id/tvCustomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Customer"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+            <!--for Customer Info-->
+            <TextView
+                    android:id="@+id/tvCustomerInfo"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_14"/>
+
+            <!--for Product-->
+            <TextView
+                    android:id="@+id/tvProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Product"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+            <!--for Product Info-->
+            <TextView
+                    android:id="@+id/tvProductNameInfo"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_14"/>
+
+            <!--for Product Cost-->
+            <TextView
+                    android:id="@+id/tvProductCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Product Cost"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+            <!--for Product Cost Info-->
+            <TextView
+                    android:id="@+id/tvProductCostInfo"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_14"/>
+
+            <!--for Installation Fee-->
+            <TextView
+                    android:id="@+id/tvInstallationFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Installation Fee"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+
+            <!--for Installation Fee Info-->
+            <TextView
+                    android:id="@+id/tvInstallationFeeInfo"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_14"/>
+
+            <!--for Tax-->
+            <TextView
+                    android:id="@+id/tvTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Tax"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+
+            <!--for Tax Info-->
+            <TextView
+                    android:id="@+id/tvTaxInfo"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INS111"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_14"/>
+
+            <!--for Total Amount-->
+            <TextView
+                    android:id="@+id/tvTotalAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Total Amount"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+            <!--for Total Amount Info-->
+            <TextView
+                    android:id="@+id/tvTotalAmtInfo"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_14"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

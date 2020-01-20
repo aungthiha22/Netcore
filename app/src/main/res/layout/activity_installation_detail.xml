@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.InstallationDetailActivity">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <!--Layout For Service-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <!--for Installation No-->
+            <TextView
+                    android:id="@+id/tvInstallationNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Installation No"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+            <!--for Installation No Info-->
+            <TextView
+                    android:id="@+id/tvInstallationNoInfo"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INS111"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_14"/>
+
+            <!--for Customer Name-->
+            <TextView
+                    android:id="@+id/tvCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:text="Customer Name"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+
+            <!--for Customer Name Info-->
+            <com.systematic.netcore.utility.SpinnerSearchForCustomer
+                    android:id="@+id/spCustomerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"/>
+
+
+            <!--for Engineer Name-->
+            <TextView
+                    android:id="@+id/tvEngineerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:text="Engineer Name"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+
+            <!--for Customer Name Info-->
+            <com.systematic.netcore.utility.SpinnerSearchForEngineer
+                    android:id="@+id/spEngineerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"/>
+
+
+            <!--for Start date-->
+            <TextView
+                    android:id="@+id/tvStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Start Date"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+            <!--for Installation No Info-->
+            <TextView
+                    android:id="@+id/tvStartDateInfo"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_regular_14"/>
+
+            <!--Layout for end date and duration-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <!--for End Date-->
+                    <TextView
+                            android:id="@+id/tvEndDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="End Date"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/text_regular_12"/>
+                    <!--for Service Finish Date Info-->
+                    <TextView
+                            android:id="@+id/tvEndDateInfo"
+                            style="@style/EditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_regular_14"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                    <!--for Duration-->
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilDuration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:hint="Duration"
+                            android:textColorHint="@color/colorPrimary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etDuration"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="10dp"
+                                android:textSize="@dimen/text_regular_14"
+                                android:textColor="@color/colorPrimary"
+                                android:inputType="number"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--for Product Group-->
+            <TextView
+                    android:id="@+id/tvProductGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:text="Product Group"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+
+            <!--for Product Info-->
+            <com.systematic.netcore.utility.SpinnerSearchForProductGroup
+                    android:id="@+id/spProductGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"/>
+
+
+            <!--for Product-->
+            <TextView
+                    android:id="@+id/tvProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:text="Product"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+
+            <!--for Product Info-->
+            <com.systematic.netcore.utility.SpinnerSearchForProduct
+                    android:id="@+id/spProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"/>
+
+            <!--for Status-->
+            <TextView
+                    android:id="@+id/tvStatus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:text="Status"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_12"/>
+
+            <!--for Installation Status Info-->
+            <Spinner
+                    android:id="@+id/spInstallStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:entries="@array/status_arr"/>
+
+            <!--for Internet code-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilInternetCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Internet Code"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etInternetCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Internet device-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilInternetDevice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Internet Device"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etInternetDevice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Fiber Cable length-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFiberCaleLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Fiber Cable Length"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFiberCableLength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for loss remark-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilLossRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Loss Remark"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLossReamrk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Tax-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Tax"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Discount-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Discount"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDiscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="number"
+                />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Config Fee-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilConfigFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Config Fee"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etConfigFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="number"
+                />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Router Fee-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilRouterFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Router Fee"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRouterFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="number"
+                />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Installation Fee-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilInstallationFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Installation Fee"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etInstallationFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Layout for Qty and Cost-->
+            <LinearLayout
+                    android:id="@+id/llQtyAndCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <!--for Qty-->
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilQty"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_8"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:layout_weight="1"
+                        android:hint="Qty"
+                        android:textColorHint="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etQty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:textSize="@dimen/text_regular_14"
+                            android:textColor="@color/colorPrimary"
+                            android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--for Cost-->
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilCost"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_8"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:layout_weight="1"
+                        android:hint="Cost"
+                        android:textColorHint="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etCost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:textSize="@dimen/text_regular_14"
+                            android:textColor="@color/colorPrimary"
+                            android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!--for Total Amount-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTotalAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Total Amount"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTotalAmt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="number"
+                />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Speed-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="Speed"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSpeed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for SNGPS-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSngps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="SNGPS"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSngps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--for Fiber Switch Qty-->
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFiberSwitchQty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:hint="FiberSwitch Qty"
+                    android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFiberSwitchQty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:textSize="@dimen/text_regular_14"
+                        android:textColor="@color/colorPrimary"
+                        android:inputType="number"
+                />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_8"
+                    android:text="Save"
+                    android:textColor="@color/color_white"
+                    android:background="@drawable/rectangleshape"
+                    android:backgroundTint="@color/colorPrimary"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

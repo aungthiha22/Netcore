@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:id="@+id/appBarLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?android:attr/actionBarSize"-->
+            <!--android:background="?android:attr/colorPrimary"-->
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay" >-->
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/imageButtonAdd"-->
+                <!--android:layout_width="@dimen/btn_w_h_toolbar"-->
+                <!--android:layout_height="@dimen/btn_w_h_toolbar"-->
+                <!--android:background="@drawable/add_new"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:layout_marginRight="20dp"/>-->
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/imageButtonUpload"-->
+                <!--android:layout_width="@dimen/btn_w_h_toolbar"-->
+                <!--android:layout_height="@dimen/btn_w_h_toolbar"-->
+                <!--android:background="@drawable/upload_white"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:layout_marginRight="20dp"/>-->
+
+        <!--</android.support.v7.widget.Toolbar>-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <LinearLayout
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ရက္/လ/ႏွစ္ အလိုက္ျပန္ၾကည္႔ရန္"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp">
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/rbDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day"
+                    android:textColor="@android:color/black"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/rbMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/month"
+                    android:textColor="@android:color/black"/>
+
+                <RadioButton
+                    android:id="@+id/rbYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/year"
+                    android:textColor="@android:color/black"/>
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edtView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:editable="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_data_no_exist"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/filterLayout"
+        android:layout_above="@+id/totalLayout"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvScout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/filterLayout"
+        android:layout_above="@+id/totalLayout"/>
+
+    <LinearLayout
+        android:id="@+id/totalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtUpload"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total_count"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/txtListCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="total"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="right"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtCreate"
+        style="@style/TextViewDefaultStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:background="@drawable/rounded_button"
+        android:text="@string/create_new_scout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txtUpload"
+        style="@style/TextViewDefaultStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:background="@drawable/rounded_button"
+        android:text="@string/upload_data"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"/>
+
+    <!--<include layout="@layout/content_main" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:id="@+id/fab"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|end"-->
+    <!--android:layout_margin="@dimen/fab_margin"-->
+    <!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+</RelativeLayout>
